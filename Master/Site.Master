@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Injection.Master.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="/static/style/site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("search", "1");
+        google.load("jquery", "1");
+        google.load("jqueryui", "1");
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#pageInfoArrows").click(function () {
+            $("#pageInfoContent").toggle('slow');
+
+            if ($('#pageInfoArrows').hasClass('expanded'))
+                $('#pageInfoArrows').removeClass('expanded');
+            else
+                $('#pageInfoArrows').addClass('expanded');
+
+        });
+    });
+    
+</script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div id="mainContainer">
+            <div id="pageInformationContainer">
+                <div id="pageInfoHeader">Description 
+                    <span id="pageInfoArrows"> </span>
+                </div>
+                <div id="pageInfoContent">
+                    <asp:ContentPlaceHolder ID="PageInfo" runat="server" />
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+    </form>
+</body>
+</html>

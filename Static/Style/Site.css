@@ -1,0 +1,77 @@
+﻿body 
+{
+    background-color: #eeeeee;
+    font-family: Arial, Sans-Serif;
+}
+
+#mainContainer 
+{
+    border: solid 1px #cccccc;
+    background-color: #dddddd;
+    width:500px;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+label 
+{
+    width: 100px;
+    float:left;
+    clear: both;
+}
+
+select 
+{
+    width: 300px;
+}
+
+input 
+{
+    clear: both;
+}
+
+#pageInformationContainer 
+{
+    width: 498px;
+    min-height: 35px;
+    overflow: hidden;
+    border: solid 1px red;
+    border-radius: 8px;
+    border-color: #cccccc;
+    background-color: #cfcfcf;
+}
+
+#pageInfoHeader 
+{
+    width:490px;
+    height: 20px;
+    background-color: #BBBBBB;
+    border-radius: 8px 8px 0 0;
+    padding: 8px 0 8px 8px;
+}
+
+#pageInfoArrows:hover 
+{
+    cursor: pointer;
+}
+
+#pageInfoArrows {
+    background: url("/static/image/arrows-sm.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 17px;
+    padding-right: 18px;
+    width: 16px;
+    
+}
+
+#pageInfoContent 
+{   
+    display:none;
+    padding: 0 20px;
+}
+
+#pageInfoArrows.expanded 
+{
+    background-position: 0 -16px;
+}
